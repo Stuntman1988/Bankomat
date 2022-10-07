@@ -18,6 +18,6 @@ public class Account{
 
     @Override
     public String toString() {
-        return "Accountname: " + accountName + "\nBalance: " + balance + "\nInterestRate: " + interestRate;
+        return "Accountname: " + accountName + "\nBalance: " + balance + "\nInterestRate: " + interestRate + "%\n";
     }
 }

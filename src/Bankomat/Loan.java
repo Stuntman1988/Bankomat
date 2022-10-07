@@ -16,9 +16,24 @@ public class Loan {
         this.authorizee = authorizee;
     }
 
+    public void changeInterestRate(double newInterestRate, Employee authorizedBy){
+        System.out.println(authorizedBy.toString() + " have authorized to change interestrate on loan "
+                + getLoanAccountName() + " from " + interestRate + "% to " + newInterestRate + "%\n"
+                + formatDateTime + "\n");
+        interestRate = newInterestRate;
+    }
+
+    public String getLoanAccountName() {
+        return loanAccountName;
+    }
+
+    public Employee getAuthorizee() {
+        return authorizee;
+    }
+
     @Override
     public String toString() {
-        return "Loan Accountname: " + loanAccountName + "\nBalance: " + loanBalance + "\nInterestRate=" + interestRate
-                + "\nAuthorized by: " + authorizee.toString();
+        return "Loan Accountname: " + loanAccountName + "\nBalance: " + loanBalance + "\nInterestRate: " + interestRate
+                + "%\nAuthorized by: " + authorizee.toString() + "\n";
     }
 }
