@@ -1,5 +1,7 @@
 package Bankomat;
 
+import java.util.*;
+
 public class Employee extends Person {
 
     protected int salary;
@@ -8,6 +10,8 @@ public class Employee extends Person {
         super(idNumber, name);
         this.salary = salary;
     }
+
+    Calendar today = Calendar.getInstance();
 
     public String getName(){
         return name;

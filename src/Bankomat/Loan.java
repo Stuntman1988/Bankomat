@@ -1,8 +1,14 @@
 package Bankomat;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class Loan {
+public class Loan{
+
+    LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyy-MM-dd HH:mm:ss");
+    String formatDateTime = now.format(formatter);
 
     protected String loanAccountName;
     protected double loanBalance;
